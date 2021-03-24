@@ -23,7 +23,7 @@ const Navbar = () => {
               <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/recent'>Most recent</NavLink>
             </li>
             <li className='nav-item'>
-              <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/contact'>SEARCH</NavLink>
+              <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/search'>SEARCH</NavLink>
             </li>
           </ul>
         </div>

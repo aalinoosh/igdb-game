@@ -4,11 +4,11 @@ import Game from './Game/Game';
 import api from '../../api/index.js';
 
 
-const Recent = () => {
+const Search = () => {
 
   const [games, setGames] = useState();
-  const [url, setUrl] = useState("https://api.igdb.com/v4/release_dates");
-  const [data, setData] = useState("fields game.name,game.cover.url,game.genres.name ; sort date desc ;where date < "+String(Math.round((new Date()).getTime() / 1000))+";limit 8;");
+  const [url, setUrl] = useState("https://api.igdb.com/v4/games");
+  const [data, setData] = useState('fields name,follows,rating,cover.url,rating_count,genres.name; search "Halo";  limit 8;');
 
 
 
@@ -20,7 +20,7 @@ const Recent = () => {
       setGames(resp.data);
     }
     getData();
-    console.log(games , "5rr6");
+
 
   }, []);
 
@@ -34,10 +34,10 @@ const Recent = () => {
 
     {games.map( (g) =>
       (
-        <Game key={g.id} row={g} />
+      <Game key={g.id} game={g} />
     ) )}
     </div>
   );
 }
 
-export default Recent;
+export default Search;

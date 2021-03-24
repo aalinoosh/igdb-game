@@ -2,8 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import { BrowserRouter, NavLink, Switch, Route, useLocation } from 'react-router-dom';
 import Notfound from './components/Notfound/Notfound';
 import Navbar from './components/Navbar/Navbar';
-import Featured from './components/Featured/Featured';
+import Search from './components/Search/Search';
 import Recent from './components/Recent/Recent';
+import Singlegame from './components/Singlegame/Singlegame';
 import Listgame from './components/Listgame/Listgame';
 import './App.css';
 
@@ -17,9 +18,11 @@ const App = () => {
         <Navbar />
         <div className='container'>
           <Switch>
-            <Route path="/contact" component={Contact} />
-            <Route path="/recent" component={Recent} />
-            <Route path="/" component={Listgame} />
+            <Route path="/search" exact component={Search} />
+            <Route path="/recent" exact component={Recent} />
+            <Route path="/" exact component={Listgame} />
+            <Route path="/game/:id" component={Singlegame} />
+
             <Route component={Notfound} />
           </Switch>
         </div>
@@ -30,12 +33,5 @@ const App = () => {
 
 }
 
-
-
-function Contact() {
-  return (
-    <h1>This is contact page</h1>
-  );
-}
 
 export default App;

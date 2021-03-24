@@ -21,11 +21,9 @@ const Game = ({ game }) => {
   let coverUrl = "https:"+game.cover.url;
   coverUrl = coverUrl.replace("t_thumb","t_cover_big")
 
-  const gameUrl = "/game/"+game.id;
-
   return (
     <div className="lg-col-3 md-col-3 debug m2 p2"  >
-      <a href={gameUrl} ><img src={coverUrl} alt={game.name} /></a>
+      <img src={coverUrl} alt={game.name} />
       Name: {game.name}
       <br/>
       follows: {game.follows}
