@@ -7,6 +7,8 @@ import Recent from './components/Recent/Recent';
 import Singlegame from './components/Singlegame/Singlegame';
 import Listgame from './components/Listgame/Listgame';
 import './App.css';
+import './index.css';
+
 
 
 const App = () => {

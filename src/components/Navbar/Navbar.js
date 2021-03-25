@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import {  NavLink } from 'react-router-dom';
 
 
+
 const Navbar = () => {
   const navbarLinks = useRef(null);
   const handleNavbarButton = (e) => {
@@ -17,13 +18,18 @@ const Navbar = () => {
         <div ref={navbarLinks} className='navbar-links menu-collapse'>
           <ul className='links-list'>
             <li className='nav-item'>
-              <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/'>Featured</NavLink>
+              <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/'> FEATURED</NavLink>
             </li>
             <li className='nav-item'>
-              <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/recent'>Most recent</NavLink>
+              <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/recent'>MOST RECENT</NavLink>
             </li>
             <li className='nav-item'>
-              <NavLink activeClassName='is-active' exact={true} className='nav-link' to='/search'>SEARCH</NavLink>
+              <NavLink activeClassName='is-active' exact={true} className='nav-link ' to='/search'>
+              <label>
+                      <input type="text" placeholder="Find your game "/>
+              </label>
+                
+                </NavLink>
             </li>
           </ul>
         </div>

@@ -24,16 +24,20 @@ const Game = ({ game }) => {
   const gameUrl = "/game/"+game.id;
 
   return (
-    <div className="lg-col-3 md-col-3 debug m2 p2"  >
-      <a href={gameUrl} ><img src={coverUrl} alt={game.name} /></a>
-      Name: {game.name}
-      <br/>
-      follows: {game.follows}
-      <br/>
-      Genres: {game.genres[0].name}
-      <br/>
-
-    </div>
+   
+      <div className="lg-col-3 md-col-3 sm-col-6 xs-col-12" >
+        <div className="bg-gr-d card m4 over-hide box-shadow">
+            <a href={gameUrl} ><img  className="responsive card-pic"  src={coverUrl} alt={game.name} /></a>
+             <div className="bg-gr-d p2">
+               
+                <p className="line-h"> Name: {game.name}</p>
+  
+                <p className="line-h" > Genres: {game.genres[0].name}</p>
+      
+            </div>
+         </div>
+      </div>
+    
   );
 }
 
