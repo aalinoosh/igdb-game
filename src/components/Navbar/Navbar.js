@@ -26,7 +26,7 @@ const Navbar = () => {
             <li className='nav-item'>
               <NavLink activeClassName='is-active' exact={true} className='nav-link ' to='/search'>
               <label>
-                      <input type="text" placeholder="Find your game "/>
+                      <input type="text" placeholder="Find your  my game "/>
               </label>
                 
                 </NavLink>
